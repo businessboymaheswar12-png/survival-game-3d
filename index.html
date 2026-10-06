@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Wildfall Survival</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="game-shell">
+      <canvas id="gameCanvas"></canvas>
+
+      <div id="hud">
+        <div class="status-panel">
+          <div class="bar"><span>Health</span><div class="meter"><div id="healthBar" class="fill health"></div></div><span id="healthText">100</span></div>
+          <div class="bar"><span>Hunger</span><div class="meter"><div id="hungerBar" class="fill hunger"></div></div><span id="hungerText">100</span></div>
+          <div class="bar"><span>Thirst</span><div class="meter"><div id="thirstBar" class="fill thirst"></div></div><span id="thirstText">100</span></div>
+          <div class="bar"><span>Stamina</span><div class="meter"><div id="staminaBar" class="fill stamina"></div></div><span id="staminaText">100</span></div>
+        </div>
+
+        <div class="top-right">
+          <div id="equippedBox">Empty Hands</div>
+          <div id="timeBox">Day 06:30</div>
+        </div>
+      </div>
+
+      <div id="centerPrompt">
+        <div id="interactionPrompt">Press E</div>
+      </div>
+
+      <div id="inventoryPanel" class="panel">
+        <div class="panel-header">Inventory</div>
+        <div id="inventoryList"></div>
+      </div>
+
+      <div id="craftingPanel" class="panel">
+        <div class="panel-header">Crafting</div>
+        <div id="craftingList"></div>
+      </div>
+
+      <div id="mobileControls">
+        <div id="joystickBase">
+          <div id="joystickStick"></div>
+        </div>
+        <div id="actionButtons">
+          <button id="attackButton">Attack</button>
+          <button id="interactButton">E</button>
+          <button id="blockButton">Block</button>
+          <button id="jumpButton">Jump</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="overlayMessage"></div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
